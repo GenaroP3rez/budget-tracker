@@ -6,46 +6,42 @@ public class BudgetCategory {
     private double expenses;
     private String name;
 
-    //source action 
+
+    //constructor and done
+    public BudgetCategory(String name, double budget, double expenses){ 
+        this.name = name; 
+        this.budget = budget;
+        this.expenses = expenses; 
+        }
+
+    //right click -> source action- fam
 
     //scanner 
-
-    public double get(){
-        return rent;
+    public double getBudget(){
+        return budget;
     }
-    public void setRent(Double rent){
-        this.rent = rent;
-    }
-
-    public double getGroceries(){
-        return groceries;
-    }
-    public void setGrocceries(Double groceries){
-        this.groceries = groceries;
-    }
-    public double getDiningOut(){
-        return diningOut;
-    }
-    public void setDiningOut(Double diningOut){
-        this.diningOut = diningOut;
-    }
-    public double getTransportation(){
-        return transportation;
-    }
-    public void setTransportation(Double transportation){
-        this.transportation = transportation;
-    }
-    public double getRent(){
-        return rent;
-    }
-    public void setRent(Double rent){
-        this.rent = rent;
+    public void setBudget(Double budget){
+        this.budget = budget;
     }
 
+    public double getExpenses(){
+        return expenses;
+    }
+    public void setExpenses(Double expenses){
+        this.expenses = expenses;
+    }
+
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public String toString(){
+        return name + ": budget $" + AString.format("%.2f, " budget) + ", spent" $" + String.format("%.2f, expenses);
+    }
 
     //sonic oc ahh coding 
-
-
-
     
 }
