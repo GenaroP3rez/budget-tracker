@@ -42,6 +42,13 @@ public class BudgetCategory {
         return name + ": budget $" + AString.format("%.2f, " budget) + ", spent" $" + String.format("%.2f, expenses);
     }
 
+    System.out.println(grocceries.getName());
+    System.out.println(grocceries.getBudget());
+    System.out.println(grocceries.getExpenses());
+    System.out.println(grocceries);
+
+    )
+
     //sonic oc ahh coding 
     
 }
