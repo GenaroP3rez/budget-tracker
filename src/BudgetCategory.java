@@ -1,4 +1,4 @@
-public class BudgetCategory {
+public class BudgetCategory implements comparable<BudgetCategory>  {
 
     //instance and budget limits
     //what is my instance is gonna have ie budget "ebery instance woukd have"
@@ -47,7 +47,11 @@ public class BudgetCategory {
     System.out.println(grocceries.getExpenses());
     System.out.println(grocceries);
 
-    )
+
+
+    public int compareTo(budgetCategrory other) {
+        return Double.compare(this/getDifference(), other.getDifference());
+    }
 
     //sonic oc ahh coding 
     
