@@ -3,16 +3,28 @@ import java.util.Scanner;
 
 public class BudgetApp {
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        List<BudgetCategory> categories = new ArrayList<>();
         // Scanner scan = new Scanner(System.in);
 
-        // while(scan.hasNextLine()) {
-        //     String category = scan.nextLine();
+        while(scan.hasNextLine()) {
+            String category = scan.nextLine();
 
-        //     double limit = scan.nextDouble();
-        //     double spent = scan.nextDouble();
+            double limit = scan.nextDouble();
+            double spent = scan.nextDouble();
 
         //     // Consume \n after spent input 
         //     if(scan.hasNextLine()) scan.nextLine();
+
+        if (scan.hasNextLine()) {
+            scan.nextLine();
+            
+        }
+      budgetCategory budgetCategory = new budgetCategory(category, limit, spent);
+      categories.add(budgetCategory);
+    }
+    System.out.println(categories);
+}
 
         //     String limitString = String.format("$%.2f", limit);
         //     String spentString = String.format("$%.2f", spent);
