@@ -1,11 +1,14 @@
 import java.util.List;
 import java.util.Scanner;
+import java.util.Collections;
+import java.util.ArrayList;
 
 public class BudgetApp {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         List<BudgetCategory> categories = new ArrayList<>();
         // Scanner scan = new Scanner(System.in);
+
 
         while(scan.hasNextLine()) {
             String category = scan.nextLine();
@@ -23,7 +26,19 @@ public class BudgetApp {
       budgetCategory budgetCategory = new budgetCategory(category, limit, spent);
       categories.add(budgetCategory);
     }
+    System.out.println("Original Categroeis");
     System.out.println(categories);
+
+    Collections.sort(categories, Collections.reverseOrders());
+
+    System.out.println();
+    System.out.println("Categrories from most overspent to least:");
+    System.out.println(categories);
+
+    int difference = budgetDifference(categories);
+
+    System.out.println();
+    System.out.println("Total budget Difference: $" + difference);
 }
 
         //     String limitString = String.format("$%.2f", limit);
@@ -49,8 +64,16 @@ public class BudgetApp {
      */
     public static int budgetDifference(List<BudgetCategory> categories) {
         // TODO: You will implement this method in Wave 4
+
+        double total = 0; 
+        for (BudjetCategory category : categories){
+            total += categopry .getDifference();
+        }
+        // return (int) total; 
         // Note that this method SHOULD NOT have a print statement.
         // It should instead return the value.
-        return -1;
+        //return -1;
+
+        return (int) total; 
     }
 }
