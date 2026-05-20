@@ -76,4 +76,14 @@ public class BudgetApp {
 
         return (int) total; 
     }
+    //attemopt at W5
+    public static double averageDifference(List<budgetCategory> categories){
+        if (categories.size() = 0){
+            return 0;
+        }
+        return (double) budgetDifference(categroeis) / categories.size();
+    }
+
+
+
 }
