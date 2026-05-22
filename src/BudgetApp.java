@@ -23,13 +23,13 @@ public class BudgetApp {
             scan.nextLine();
             
         }
-      budgetCategory budgetCategory = new budgetCategory(category, limit, spent);
-      categories.add(budgetCategory);
+      BudgetCategory BudgetCategory = new BudgetCategory(category, limit, spent);
+      categories.add(BudgetCategory);
     }
     System.out.println("Original Categroeis");
     System.out.println(categories);
 
-    Collections.sort(categories, Collections.reverseOrders());
+    Collections.sort(categories, Collections.reverseOrder());
 
     System.out.println();
     System.out.println("Categrories from most overspent to least:");
@@ -66,8 +66,8 @@ public class BudgetApp {
         // TODO: You will implement this method in Wave 4
 
         double total = 0; 
-        for (BudjetCategory category : categories){
-            total += categopry .getDifference();
+        for (BudgetCategory : categories){
+            total += catagory .getDifference();
         }
         // return (int) total; 
         // Note that this method SHOULD NOT have a print statement.
@@ -77,11 +77,11 @@ public class BudgetApp {
         return (int) total; 
     }
     //attemopt at W5
-    public static double averageDifference(List<budgetCategory> categories){
+    public static double averageDifference(List<BudgetCategory> categories){
         if (categories.size() = 0){
             return 0;
         }
-        return (double) budgetDifference(categroeis) / categories.size();
+        return (double) budgetDifference(category) / categories.size();
     }
 
 

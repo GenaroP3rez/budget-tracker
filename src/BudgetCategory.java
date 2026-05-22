@@ -1,4 +1,4 @@
-public class BudgetCategory implements comparable<BudgetCategory>  {
+public class BudgetCategory implements Comparable<BudgetCategory>  {
 
     //instance and budget limits
     //what is my instance is gonna have ie budget "ebery instance woukd have"
@@ -38,8 +38,13 @@ public class BudgetCategory implements comparable<BudgetCategory>  {
         this.name = name;
     }
 
+
+    public double getDifference(){
+        return expenses - budget;
+    }
+
     public String toString(){
-        return name + ": budget $" + AString.format("%.2f, " budget) + ", spent" $" + String.format("%.2f, expenses);
+        return name + ": budget $" + String.format("%.2f, " budget) + ", spent" $" + String.format("%.2f, expenses);
     }
 
     System.out.println(grocceries.getName());
@@ -50,7 +55,7 @@ public class BudgetCategory implements comparable<BudgetCategory>  {
 
 
     public int compareTo(budgetCategrory other) {
-        return Double.compare(this/getDifference(), other.getDifference());
+        return Double.compare(this.getDifference(), other.getDifference());
     }
 
     //sonic oc ahh coding 
